@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/crud_nav"
+    app:startDestination="@id/listTransactionFragment">
+
+    <fragment
+        android:id="@+id/listTransactionFragment"
+        android:name="com.example.bondoman.ListTransactionFragment"
+        android:label="Transaksi"
+        tools:layout="@layout/fragment_list_transaction" >
+        <action
+            android:id="@+id/action_listTransactionFragment_to_addTransactionFragment"
+            app:destination="@id/addTransactionFragment" />
+        <action
+            android:id="@+id/action_listTransactionFragment_to_updateTransactionFragment"
+            app:destination="@id/updateTransactionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addTransactionFragment"
+        android:name="com.example.bondoman.AddTransactionFragment"
+        android:label="Tambah Transaksi"
+        tools:layout="@layout/fragment_add_transaction" >
+        <action
+            android:id="@+id/action_addTransactionFragment_to_listTransactionFragment"
+            app:destination="@id/listTransactionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateTransactionFragment"
+        android:name="com.example.bondoman.UpdateTransactionFragment"
+        android:label="Update Transaksi"
+        tools:layout="@layout/fragment_update_transaction" >
+        <action
+            android:id="@+id/action_updateTransactionFragment_to_listTransactionFragment"
+            app:destination="@id/listTransactionFragment" />
+        <argument
+            android:name="currentTransaction"
+            app:argType="com.example.bondoman.data.Transaction" />
+    </fragment>
+</navigation>

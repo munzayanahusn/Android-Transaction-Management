@@ -1,0 +1,58 @@
+<!-- dialog_file_name.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/light_bg"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/title_download"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Unduh Daftar Transaksi"
+        android:textStyle="bold"
+        android:textColor="@color/outer_space"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:paddingTop="10sp"
+        android:paddingBottom="10sp"/>
+
+    <EditText
+        android:id="@+id/edit_text_file_name"
+        android:background="@drawable/rounded_corner_view"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"
+        android:hint="Nama File" />
+
+    <TextView
+        android:id="@+id/text_format"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:hint="Format berkas" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/radio_xlsx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=".XLSX"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/radio_xls"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=".XLS" />
+
+    </RadioGroup>
+
+</LinearLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_bg"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".TwibbonFragment">
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/cameraViewTwibbon"
+        android:layout_width="360dp"
+        android:layout_height="360dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/imagePreview"
+        android:layout_width="360dp"
+        android:layout_height="360dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@id/cameraViewTwibbon"
+        app:layout_constraintEnd_toEndOf="@id/cameraViewTwibbon"
+        app:layout_constraintStart_toStartOf="@id/cameraViewTwibbon"
+        app:layout_constraintTop_toTopOf="@id/cameraViewTwibbon"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/twibbonView"
+        android:layout_width="360dp"
+        android:layout_height="360dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/twibbon1"
+        app:layout_constraintBottom_toBottomOf="@id/cameraViewTwibbon"
+        app:layout_constraintEnd_toEndOf="@id/cameraViewTwibbon"
+        app:layout_constraintStart_toStartOf="@id/cameraViewTwibbon"
+        app:layout_constraintTop_toTopOf="@id/cameraViewTwibbon"/>
+
+    <ImageButton
+    android:id="@+id/changeTwibbon"
+    android:layout_width="48dp"
+    android:layout_height="48dp"
+    android:contentDescription="@string/capture_picture"
+    android:src="@drawable/baseline_change_circle_24"
+        android:background="?attr/selectableItemBackgroundBorderless"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toStartOf="@id/captureBtnTwibbon"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/cameraViewTwibbon"
+    tools:visibility="visible" />
+    <ImageButton
+    android:id="@+id/captureBtnTwibbon"
+    android:layout_width="48dp"
+    android:layout_height="48dp"
+    android:contentDescription="@string/capture_picture"
+    android:src="@drawable/baseline_camera_24"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+        android:background="?attr/selectableItemBackgroundBorderless"
+    app:layout_constraintTop_toBottomOf="@+id/cameraViewTwibbon"
+    tools:visibility="visible" />
+    <ImageButton
+        android:id="@+id/changeCamera"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:contentDescription="@string/capture_picture"
+        android:src="@drawable/baseline_cameraswitch_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/captureBtnTwibbon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cameraViewTwibbon"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/cobaLagiBtnTwibbon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/coba_lagi"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cameraViewTwibbon"
+        tools:visibility="gone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

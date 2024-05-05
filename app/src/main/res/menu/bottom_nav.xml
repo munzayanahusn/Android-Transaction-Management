@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/transaction"
+        android:title="@string/transaksi"
+        android:icon="@drawable/uil_transaction" />
+    <item
+        android:id="@+id/scanner"
+        android:title="@string/scanner"
+        android:icon="@drawable/tabler_line_scan" />
+    <item
+        android:id="@+id/graph"
+        android:title="@string/graph"
+        android:icon="@drawable/foundation_graph_pie" />
+    <item
+        android:id="@+id/settings"
+        android:title="@string/setting"
+        android:icon="@drawable/solar_settings_bold" />
+</menu>
